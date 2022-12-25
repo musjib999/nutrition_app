@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:nutrition/survey/constants.dart';
+import 'package:nutrition/themes/colors.dart';
 import 'package:sizer/sizer.dart';
 
 class SurveyScreen extends StatefulWidget {
@@ -38,12 +40,13 @@ class _SurveyScreenState extends State<SurveyScreen> {
                   children: [
                     Text(
                       '${currentQuestion.ceil()}/${surveyScreens.length}',
-                      style: const TextStyle(color: Colors.blueAccent, fontSize: 16, fontWeight: FontWeight.w500),
+                      style: GoogleFonts.mukta(color: AppColors.primaryColor, fontSize: 16, fontWeight: FontWeight.w500),
                     ),
                     const SizedBox(height: 8.0),
                     LinearProgressIndicator(
                       value: currentQuestion / surveyScreens.length,
-                      valueColor: const AlwaysStoppedAnimation<Color>(Colors.blueAccent),
+                      valueColor: const AlwaysStoppedAnimation<Color>(AppColors.primaryColor),
+                      backgroundColor: AppColors.primaryColor.withOpacity(0.4),
                     ),
                   ],
                 ),

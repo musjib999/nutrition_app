@@ -1,0 +1,78 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:sizer/sizer.dart';
+
+import '../../themes/assets.dart';
+import '../../themes/colors.dart';
+import '../constants.dart';
+import '../widgets/primary_button.dart';
+class Weight extends StatefulWidget {
+  const Weight({Key? key}) : super(key: key);
+
+  @override
+  State<Weight> createState() => _WeightState();
+}
+
+class _WeightState extends State<Weight> {
+  double weight = 106;
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Column(
+            children: [
+              SizedBox(height: 15.sp),
+              Text(
+                'Choose your weight',
+                style: GoogleFonts.mukta(fontSize: 20, fontWeight: FontWeight.w600),
+              ),
+              SvgPicture.asset(AppAssets.weightSvg, height: 50.h,),
+              SizedBox(height: 8.sp),
+              Text('${weight.ceil()} lbs', style: GoogleFonts.mukta(fontSize: 30, fontWeight: FontWeight.bold),),
+              Slider(
+                inactiveColor: AppColors.primaryColor.withOpacity(0.4),
+                activeColor: AppColors.primaryColor,
+                thumbColor: AppColors.primaryColor,
+                value: weight, onChanged: (value){
+                setState(() {
+                  weight = value;
+                });
+              }, min: 94.0, max: 300.0,),
+            ],
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              GestureDetector(
+                onTap: () {
+                  surveyScreenController.previousPage(
+                    duration: const Duration(milliseconds: 500),
+                    curve: Curves.linear,
+                  );
+                },
+                child: const PrimaryButton2(
+                  title: 'Back',
+                ),
+              ),
+              GestureDetector(
+                onTap: () {
+                  surveyScreenController.nextPage(
+                    duration: const Duration(milliseconds: 500),
+                    curve: Curves.linear,
+                  );
+                },
+                child: const PrimaryButton(
+                  title: 'Next',
+                  isSelected: true,
+                ),
+              ),
+            ],
+          )
+        ],
+      ),
+    );
+  }
+}

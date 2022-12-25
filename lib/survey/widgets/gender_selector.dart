@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:nutrition/themes/colors.dart';
 import 'package:sizer/sizer.dart';
 
 class GenderSelector extends StatelessWidget {
@@ -19,7 +21,8 @@ class GenderSelector extends StatelessWidget {
       width: 35.w,
       decoration: BoxDecoration(
         shape: BoxShape.circle,
-        border: Border.all(color: !isSelected ? Colors.grey : Colors.green),
+        border: Border.all(color: !isSelected ? Colors.grey : AppColors.grassGreen),
+        color: !isSelected ? AppColors.white : AppColors.faintGreen,
       ),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -28,12 +31,12 @@ class GenderSelector extends StatelessWidget {
           Icon(
             icon,
             size: 60,
-            color: !isSelected ? Colors.grey : Colors.green,
+            color: !isSelected ? Colors.grey : AppColors.grassGreen,
           ),
           SizedBox(height: 8.sp),
           Text(
             title,
-            style: TextStyle(
+            style: GoogleFonts.mukta(
                 fontSize: 16,
                 fontWeight: FontWeight.w400,
                 color: !isSelected ? Colors.grey : Colors.black),

@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:nutrition/survey/constants.dart';
 import 'package:sizer/sizer.dart';
 
 import '../widgets/gender_selector.dart';
+import '../widgets/primary_button.dart';
 
 class GenderScreen extends StatefulWidget {
   const GenderScreen({Key? key}) : super(key: key);
@@ -23,15 +25,15 @@ class _GenderScreenState extends State<GenderScreen> {
           Column(
             children: [
               SizedBox(height: 15.sp),
-              const Text(
+              Text(
                 'What\'s your gender?',
-                style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600),
+                style: GoogleFonts.mukta(fontSize: 20, fontWeight: FontWeight.w600),
               ),
               SizedBox(height: 8.sp),
-              const Text(
+              Text(
                 'To give you a better experience, we need to know your gender',
                 textAlign: TextAlign.center,
-                style: TextStyle(fontSize: 15, color: Colors.grey),
+                style: GoogleFonts.mukta(fontSize: 15, color: Colors.grey),
               ),
               SizedBox(height: 12.sp),
               GestureDetector(
@@ -66,24 +68,7 @@ class _GenderScreenState extends State<GenderScreen> {
                     curve: Curves.linear,
                   );
                 },
-                child: Container(
-                  padding: const EdgeInsets.symmetric(
-                      horizontal: 30.0, vertical: 15.0),
-                  width: 40.w,
-                  decoration: BoxDecoration(
-                    color: isMaleSelected == false && isFemaleSelected == false ? Colors.grey : Colors.blueAccent,
-                    borderRadius: BorderRadius.circular(15.0),
-                  ),
-                  child: const Center(
-                    child: Text(
-                      'Next',
-                      style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 17,
-                          color: Colors.white),
-                    ),
-                  ),
-                ),
+                child: PrimaryButton(isSelected: isMaleSelected == false && isFemaleSelected == false ? false : true, title: 'Next',),
               )
             ],
           )
@@ -92,4 +77,6 @@ class _GenderScreenState extends State<GenderScreen> {
     );
   }
 }
+
+
 
