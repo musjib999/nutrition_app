@@ -5,6 +5,8 @@ import 'package:nutrition/themes/assets.dart';
 import 'package:nutrition/themes/colors.dart';
 import 'package:sizer/sizer.dart';
 
+import '../authentication/login.dart';
+
 class OnBoarding extends StatelessWidget {
   const OnBoarding({Key? key}) : super(key: key);
 
@@ -37,7 +39,9 @@ class OnBoarding extends StatelessWidget {
               ),
             ),
             SizedBox(height: 25.sp),
-            PrimaryButton(title: 'Get Started', onTap: (){}, isSelected: true, width: 100.w,),
+            PrimaryButton(title: 'Get Started', onTap: (){
+              Navigator.of(context).pushReplacement(Login.route());
+            }, isSelected: true, width: 100.w,),
           ],
         ),
       ),

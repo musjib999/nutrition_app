@@ -80,3 +80,53 @@ class PrimaryButton2 extends StatelessWidget {
     );
   }
 }
+
+class AppOutlinedButton extends StatelessWidget {
+  const AppOutlinedButton({
+    Key? key,
+    required this.title,
+    this.width,
+    required this.onTap,
+    required this.icon,
+    required this.iconColor,
+  }) : super(key: key);
+
+  final String title;
+  final IconData icon;
+  final Color iconColor;
+  final double? width;
+  final Function() onTap;
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: onTap,
+      child: Container(
+        padding: const EdgeInsets.symmetric(
+            horizontal: 30.0, vertical: 15.0),
+        width: width ?? 40.w,
+        decoration: BoxDecoration(
+          border: Border.all(color: AppColors.grey),
+          borderRadius: BorderRadius.circular(15.0),
+        ),
+        child: Center(
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              Icon(icon, color: iconColor,),
+              Text(
+                title,
+                style: GoogleFonts.mukta(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 16,
+                  color: AppColors.black,
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
