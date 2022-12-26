@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nutrition/onboarding/onboarding.dart';
 import 'package:nutrition/survey/survey_screen.dart';
 import 'package:sizer/sizer.dart';
 
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
           theme: ThemeData(
             primarySwatch: Colors.blue,
           ),
-          home: const SurveyScreen(),
+          home: const OnBoarding(),
         );
       }
     );

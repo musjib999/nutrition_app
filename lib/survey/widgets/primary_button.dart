@@ -9,30 +9,37 @@ class PrimaryButton extends StatelessWidget {
     Key? key,
     required this.title,
     this.color = AppColors.primaryColor,
+    this.width,
     required this.isSelected,
+    required this.onTap,
   }) : super(key: key);
 
   final String title;
+  final double? width;
   final Color? color;
+  final Function() onTap;
   final bool isSelected;
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.symmetric(
-          horizontal: 30.0, vertical: 15.0),
-      width: 40.w,
-      decoration: BoxDecoration(
-        color: isSelected == false ? Colors.grey : color,
-        borderRadius: BorderRadius.circular(15.0),
-      ),
-      child: Center(
-        child: Text(
-          title,
-          style: GoogleFonts.mukta(
-            fontWeight: FontWeight.bold,
-            fontSize: 16,
-            color: Colors.white,
+    return GestureDetector(
+      onTap: onTap,
+      child: Container(
+        padding: const EdgeInsets.symmetric(
+            horizontal: 30.0, vertical: 15.0),
+        width: width ?? 40.w,
+        decoration: BoxDecoration(
+          color: isSelected == false ? Colors.grey : color,
+          borderRadius: BorderRadius.circular(15.0),
+        ),
+        child: Center(
+          child: Text(
+            title,
+            style: GoogleFonts.mukta(
+              fontWeight: FontWeight.bold,
+              fontSize: 16,
+              color: Colors.white,
+            ),
           ),
         ),
       ),

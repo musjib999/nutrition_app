@@ -58,17 +58,15 @@ class _HeightScreenState extends State<HeightScreen> {
                   title: 'Back',
                 ),
               ),
-              GestureDetector(
+              PrimaryButton(
+                title: 'Next',
+                isSelected: true,
                 onTap: () {
                   surveyScreenController.nextPage(
                     duration: const Duration(milliseconds: 500),
                     curve: Curves.linear,
                   );
                 },
-                child: const PrimaryButton(
-                  title: 'Next',
-                  isSelected: true,
-                ),
               ),
             ],
           )

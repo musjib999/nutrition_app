@@ -3,6 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:nutrition/survey/constants.dart';
 import 'package:sizer/sizer.dart';
 
+import '../../themes/colors.dart';
 import '../widgets/gender_selector.dart';
 import '../widgets/primary_button.dart';
 
@@ -33,7 +34,7 @@ class _GenderScreenState extends State<GenderScreen> {
               Text(
                 'To give you a better experience, we need to know your gender',
                 textAlign: TextAlign.center,
-                style: GoogleFonts.mukta(fontSize: 15, color: Colors.grey),
+                style: GoogleFonts.mukta(fontSize: 15, color: AppColors.grey),
               ),
               SizedBox(height: 12.sp),
               GestureDetector(
@@ -61,15 +62,12 @@ class _GenderScreenState extends State<GenderScreen> {
           Row(
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
-              GestureDetector(
-                onTap: isMaleSelected == false && isFemaleSelected == false ? (){} :  () {
-                  surveyScreenController.nextPage(
-                    duration: const Duration(milliseconds: 500),
-                    curve: Curves.linear,
-                  );
-                },
-                child: PrimaryButton(isSelected: isMaleSelected == false && isFemaleSelected == false ? false : true, title: 'Next',),
-              )
+              PrimaryButton(isSelected: isMaleSelected == false && isFemaleSelected == false ? false : true, title: 'Next', onTap: isMaleSelected == false && isFemaleSelected == false ? (){} :  () {
+                surveyScreenController.nextPage(
+                  duration: const Duration(milliseconds: 500),
+                  curve: Curves.linear,
+                );
+              },)
             ],
           )
         ],

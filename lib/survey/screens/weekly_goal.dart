@@ -120,20 +120,18 @@ class _WeeklyGoalState extends State<WeeklyGoal> {
                   title: 'Back',
                 ),
               ),
-              GestureDetector(
-                onTap: () {
+              PrimaryButton(
+                title: 'Done',
+                isSelected: firstOption == false && secondOption == false && thirdOption == false && forthOption == false ? false : true,
+                onTap: firstOption == false && secondOption == false && thirdOption == false && forthOption == false ? (){} : () {
                   surveyScreenController.nextPage(
                     duration: const Duration(milliseconds: 500),
                     curve: Curves.linear,
                   );
                 },
-                child: const PrimaryButton(
-                  title: 'Done',
-                  isSelected: true,
-                ),
               ),
             ],
-          )
+          ),
         ],
       ),
     );

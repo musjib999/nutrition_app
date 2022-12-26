@@ -57,17 +57,15 @@ class _WeightState extends State<Weight> {
                   title: 'Back',
                 ),
               ),
-              GestureDetector(
+              PrimaryButton(
                 onTap: () {
                   surveyScreenController.nextPage(
                     duration: const Duration(milliseconds: 500),
                     curve: Curves.linear,
                   );
                 },
-                child: const PrimaryButton(
-                  title: 'Next',
-                  isSelected: true,
-                ),
+                title: 'Next',
+                isSelected: true,
               ),
             ],
           )
