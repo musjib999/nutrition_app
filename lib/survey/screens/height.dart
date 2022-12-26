@@ -7,6 +7,7 @@ import 'package:sizer/sizer.dart';
 
 import '../../themes/colors.dart';
 import '../constants.dart';
+import '../helpers/convertions.dart';
 
 class HeightScreen extends StatefulWidget {
   const HeightScreen({Key? key}) : super(key: key);
@@ -32,7 +33,13 @@ class _HeightScreenState extends State<HeightScreen> {
               ),
               SvgPicture.asset(AppAssets.heightSvg, height: 50.h,),
               SizedBox(height: 8.sp),
-              Text('${height.ceil()} cm', style: GoogleFonts.mukta(fontSize: 30, fontWeight: FontWeight.bold),),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text('${height.ceil()} cm', style: GoogleFonts.mukta(fontSize: 30, fontWeight: FontWeight.bold),),
+                  Text('(${cmToFeetConversion(height).toStringAsFixed(2)} feet)', style: GoogleFonts.mukta(fontSize: 18, fontWeight: FontWeight.normal, color: AppColors.grey),),
+                ],
+              ),
               Slider(
                 inactiveColor: AppColors.primaryColor.withOpacity(0.4),
                 activeColor: AppColors.primaryColor,

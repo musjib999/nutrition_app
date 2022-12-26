@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:ionicons/ionicons.dart';
+import 'package:nutrition/survey/survey_screen.dart';
 import 'package:nutrition/themes/colors.dart';
 import 'package:sizer/sizer.dart';
 
@@ -48,7 +49,7 @@ class Register extends StatelessWidget {
                         SizedBox(height: 30.sp),
                         TextFormField(
                           decoration: InputDecoration(
-                            prefixIcon: const Icon(Icons.person),
+                            prefixIcon: const Icon(Icons.person_outline),
                             hintText: 'Enter first name',
                             labelText: 'First Name',
                             enabledBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(10.0), borderSide: const BorderSide(color: AppColors.grey)),
@@ -58,7 +59,7 @@ class Register extends StatelessWidget {
                         SizedBox(height: 15.sp),
                         TextFormField(
                           decoration: InputDecoration(
-                            prefixIcon: const Icon(Icons.person),
+                            prefixIcon: const Icon(Icons.person_outline),
                             hintText: 'Enter last name',
                             labelText: 'Last Name',
                             enabledBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(10.0), borderSide: const BorderSide(color: AppColors.grey)),
@@ -109,6 +110,7 @@ class Register extends StatelessWidget {
                         ),
                         SizedBox(height: 20.sp),
                         PrimaryButton(title: 'Register', onTap: (){
+                          Navigator.of(context).pushReplacement(SurveyScreen.route());
                         }, isSelected: true, width: 100.w,),
                         SizedBox(height: 10.sp),
                         Row(

@@ -5,6 +5,7 @@ import 'package:nutrition/themes/colors.dart';
 import 'package:sizer/sizer.dart';
 
 class SurveyScreen extends StatefulWidget {
+  static Route route() => MaterialPageRoute(builder: (_) => const SurveyScreen());
   const SurveyScreen({Key? key}) : super(key: key);
 
   @override

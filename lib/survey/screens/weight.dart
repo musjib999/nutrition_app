@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:nutrition/survey/helpers/convertions.dart';
 import 'package:sizer/sizer.dart';
 
 import '../../themes/assets.dart';
@@ -31,7 +32,13 @@ class _WeightState extends State<Weight> {
               ),
               SvgPicture.asset(AppAssets.weightSvg, height: 50.h,),
               SizedBox(height: 8.sp),
-              Text('${weight.ceil()} lbs', style: GoogleFonts.mukta(fontSize: 30, fontWeight: FontWeight.bold),),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text('${weight.ceil()} lbs', style: GoogleFonts.mukta(fontSize: 30, fontWeight: FontWeight.bold),),
+                  Text('(${poundsToKg(weight).toStringAsFixed(2)} kg)', style: GoogleFonts.mukta(fontSize: 18, fontWeight: FontWeight.normal, color: AppColors.grey),),
+                ],
+              ),
               Slider(
                 inactiveColor: AppColors.primaryColor.withOpacity(0.4),
                 activeColor: AppColors.primaryColor,
