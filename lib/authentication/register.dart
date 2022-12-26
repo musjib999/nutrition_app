@@ -5,9 +5,10 @@ import 'package:nutrition/themes/colors.dart';
 import 'package:sizer/sizer.dart';
 
 import '../survey/widgets/primary_button.dart';
-class Login extends StatelessWidget {
-  static Route route() => MaterialPageRoute(builder: (_) => const Login());
-  const Login({Key? key}) : super(key: key);
+class Register extends StatelessWidget {
+  static Route route() => MaterialPageRoute(builder: (_) => const Register());
+  const Register({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -34,20 +35,50 @@ class Login extends StatelessWidget {
                     child: Column(
                       children: [
                         SizedBox(height: 10.sp),
-                        Text('Welcome Back!', style: GoogleFonts.mukta(fontWeight: FontWeight.w700, fontSize: 20),),
+                        Text('Create an account.', style: GoogleFonts.mukta(fontWeight: FontWeight.w700, fontSize: 20),),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            Text('Don\'t have an account?', style: GoogleFonts.mukta(fontSize: 15, color: AppColors.grey),),
-                            TextButton(onPressed: (){}, child: Text('Register', style: GoogleFonts.mukta(fontSize: 15, fontWeight: FontWeight.w600,color: AppColors.primaryColor),),),
+                            Text('Already a member?', style: GoogleFonts.mukta(fontSize: 15, color: AppColors.grey),),
+                            TextButton(onPressed: (){}, child: Text('Sign In', style: GoogleFonts.mukta(fontSize: 15, fontWeight: FontWeight.w600,color: AppColors.primaryColor),),),
                           ],
                         ),
                         SizedBox(height: 30.sp),
                         TextFormField(
                           decoration: InputDecoration(
+                            prefixIcon: const Icon(Icons.person),
+                            hintText: 'Enter first name',
+                            labelText: 'First Name',
+                            enabledBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(10.0), borderSide: const BorderSide(color: AppColors.grey)),
+                            focusedBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(10.0), borderSide: const BorderSide(color: AppColors.primaryColor, width: 1.5,)),
+                          ),
+                        ),
+                        SizedBox(height: 15.sp),
+                        TextFormField(
+                          decoration: InputDecoration(
+                            prefixIcon: const Icon(Icons.person),
+                            hintText: 'Enter last name',
+                            labelText: 'Last Name',
+                            enabledBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(10.0), borderSide: const BorderSide(color: AppColors.grey)),
+                            focusedBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(10.0), borderSide: const BorderSide(color: AppColors.primaryColor, width: 1.5,)),
+                          ),
+                        ),
+                        SizedBox(height: 15.sp),
+                        TextFormField(
+                          decoration: InputDecoration(
                             prefixIcon: const Icon(Icons.email_outlined),
                             hintText: 'Enter email',
                             labelText: 'Email',
+                            enabledBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(10.0), borderSide: const BorderSide(color: AppColors.grey)),
+                            focusedBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(10.0), borderSide: const BorderSide(color: AppColors.primaryColor, width: 1.5,)),
+                          ),
+                        ),
+                        SizedBox(height: 15.sp),
+                        TextFormField(
+                          decoration: InputDecoration(
+                            prefixIcon: const Icon(Icons.phone),
+                            hintText: 'Enter phone number',
+                            labelText: 'Phone',
                             enabledBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(10.0), borderSide: const BorderSide(color: AppColors.grey)),
                             focusedBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(10.0), borderSide: const BorderSide(color: AppColors.primaryColor, width: 1.5,)),
                           ),
@@ -63,15 +94,19 @@ class Login extends StatelessWidget {
                             focusedBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(10.0), borderSide: const BorderSide(color: AppColors.primaryColor, width: 1.5,)),
                           ),
                         ),
-                        SizedBox(height: 20.sp),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.end,
-                          children: [
-                            TextButton(onPressed: (){}, child: Text('Forgot Password?', style: GoogleFonts.mukta(fontSize: 15, fontWeight: FontWeight.w600,color: AppColors.primaryColor),),),
-                          ],
+                        SizedBox(height: 15.sp),
+                        TextFormField(
+                          obscureText: true,
+                          decoration: InputDecoration(
+                            prefixIcon: const Icon(Icons.lock_outline),
+                            hintText: 'Enter confirned password',
+                            labelText: 'Confirm password',
+                            enabledBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(10.0), borderSide: const BorderSide(color: AppColors.grey)),
+                            focusedBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(10.0), borderSide: const BorderSide(color: AppColors.primaryColor, width: 1.5,)),
+                          ),
                         ),
                         SizedBox(height: 20.sp),
-                        PrimaryButton(title: 'Sign In', onTap: (){
+                        PrimaryButton(title: 'Register', onTap: (){
                         }, isSelected: true, width: 100.w,),
                         SizedBox(height: 10.sp),
                         Row(
