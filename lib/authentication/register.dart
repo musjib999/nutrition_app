@@ -40,7 +40,9 @@ class Register extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Text('Already a member?', style: GoogleFonts.mukta(fontSize: 15, color: AppColors.grey),),
-                            TextButton(onPressed: (){}, child: Text('Sign In', style: GoogleFonts.mukta(fontSize: 15, fontWeight: FontWeight.w600,color: AppColors.primaryColor),),),
+                            TextButton(onPressed: (){
+                              Navigator.of(context).pop();
+                            }, child: Text('Sign In', style: GoogleFonts.mukta(fontSize: 15, fontWeight: FontWeight.w600,color: AppColors.primaryColor),),),
                           ],
                         ),
                         SizedBox(height: 30.sp),

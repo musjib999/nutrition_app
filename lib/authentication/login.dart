@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:ionicons/ionicons.dart';
+import 'package:nutrition/authentication/register.dart';
 import 'package:nutrition/themes/colors.dart';
 import 'package:sizer/sizer.dart';
 
@@ -39,7 +40,9 @@ class Login extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Text('Don\'t have an account?', style: GoogleFonts.mukta(fontSize: 15, color: AppColors.grey),),
-                            TextButton(onPressed: (){}, child: Text('Register', style: GoogleFonts.mukta(fontSize: 15, fontWeight: FontWeight.w600,color: AppColors.primaryColor),),),
+                            TextButton(onPressed: (){
+                              Navigator.of(context).push(Register.route());
+                            }, child: Text('Register', style: GoogleFonts.mukta(fontSize: 15, fontWeight: FontWeight.w600,color: AppColors.primaryColor),),),
                           ],
                         ),
                         SizedBox(height: 30.sp),
