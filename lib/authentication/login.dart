@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:ionicons/ionicons.dart';
 import 'package:nutrition/authentication/register.dart';
+import 'package:nutrition/shared/constants.dart';
+import 'package:nutrition/shared/widgets/menu.dart';
 import 'package:nutrition/themes/colors.dart';
 import 'package:sizer/sizer.dart';
 
@@ -75,6 +77,7 @@ class Login extends StatelessWidget {
                         ),
                         SizedBox(height: 20.sp),
                         PrimaryButton(title: 'Sign In', onTap: (){
+                          Navigator.of(context).pushReplacement(AppMenu.route(screens: appMenus));
                         }, isSelected: true, width: 100.w,),
                         SizedBox(height: 10.sp),
                         Row(

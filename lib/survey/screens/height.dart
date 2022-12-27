@@ -6,7 +6,7 @@ import 'package:nutrition/themes/assets.dart';
 import 'package:sizer/sizer.dart';
 
 import '../../themes/colors.dart';
-import '../constants.dart';
+import '../../shared/constants.dart';
 import '../helpers/convertions.dart';
 
 class HeightScreen extends StatefulWidget {

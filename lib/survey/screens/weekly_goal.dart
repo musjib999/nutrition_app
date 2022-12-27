@@ -5,8 +5,9 @@ import 'package:nutrition/survey/widgets/primary_button.dart';
 import 'package:nutrition/themes/assets.dart';
 import 'package:sizer/sizer.dart';
 
+import '../../shared/widgets/menu.dart';
 import '../../themes/colors.dart';
-import '../constants.dart';
+import '../../shared/constants.dart';
 import '../widgets/rounded_border_card.dart';
 
 class WeeklyGoal extends StatefulWidget {
@@ -124,10 +125,7 @@ class _WeeklyGoalState extends State<WeeklyGoal> {
                 title: 'Done',
                 isSelected: firstOption == false && secondOption == false && thirdOption == false && forthOption == false ? false : true,
                 onTap: firstOption == false && secondOption == false && thirdOption == false && forthOption == false ? (){} : () {
-                  surveyScreenController.nextPage(
-                    duration: const Duration(milliseconds: 500),
-                    curve: Curves.linear,
-                  );
+                  Navigator.of(context).pushReplacement(AppMenu.route(screens: appMenus));
                 },
               ),
             ],

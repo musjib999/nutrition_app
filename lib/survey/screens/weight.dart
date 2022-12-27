@@ -6,7 +6,7 @@ import 'package:sizer/sizer.dart';
 
 import '../../themes/assets.dart';
 import '../../themes/colors.dart';
-import '../constants.dart';
+import '../../shared/constants.dart';
 import '../widgets/primary_button.dart';
 class Weight extends StatefulWidget {
   const Weight({Key? key}) : super(key: key);

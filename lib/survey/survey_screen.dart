@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:nutrition/survey/constants.dart';
+import 'package:nutrition/shared/constants.dart';
 import 'package:nutrition/themes/colors.dart';
 import 'package:sizer/sizer.dart';
 
@@ -53,7 +53,7 @@ class _SurveyScreenState extends State<SurveyScreen> {
                 ),
               ),
               SizedBox(
-                height: 85.h,
+                height: 80.h,
                 child: PageView.builder(
                     physics: const NeverScrollableScrollPhysics(),
                   controller: surveyScreenController,

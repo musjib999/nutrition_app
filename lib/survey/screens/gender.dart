@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:nutrition/survey/constants.dart';
+import 'package:nutrition/shared/constants.dart';
 import 'package:sizer/sizer.dart';
 
 import '../../themes/colors.dart';
