@@ -55,6 +55,8 @@ class MealPlan extends StatelessWidget {
                         'One piece oil less cat fish pepper-soup with one cube seasoning of yourchoice.',
                   ),
                   SizedBox(height: 8.sp),
+                  const MealPlanCard(title: 'Snack', calories: 133, svg: AppAssets.snack, color: AppColors.pinky,meal: '2 Cucumber, 200 grams of watermelon, 2 oranges, 4 medium sized carrots OR, 2 boiled eggs',),
+                  SizedBox(height: 8.sp),
                   MealPlanCard(
                     title: 'Dinner',
                     calories: 133,

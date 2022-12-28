@@ -3,6 +3,7 @@ class AppAssets {
   static const String weightSvg = 'assets/svgs/weight.svg';
   static const String breakfast = 'assets/svgs/breakfast.svg';
   static const String lunch = 'assets/svgs/lunch.svg';
+  static const String snack = 'assets/svgs/snack.svg';
   static const String dinner = 'assets/svgs/dinner.svg';
 
   static const String salad = 'assets/images/salad.png';
