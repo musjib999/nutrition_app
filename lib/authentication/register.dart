@@ -6,6 +6,7 @@ import 'package:nutrition/themes/colors.dart';
 import 'package:sizer/sizer.dart';
 
 import '../survey/widgets/primary_button.dart';
+import '../themes/assets.dart';
 class Register extends StatelessWidget {
   static Route route() => MaterialPageRoute(builder: (_) => const Register());
   const Register({Key? key}) : super(key: key);
@@ -20,9 +21,9 @@ class Register extends StatelessWidget {
         child: Column(
           children: [
             Container(
-              height: 16.h,
+              height: 20.h,
               padding: EdgeInsets.only(top: 5.sp, bottom: 5.sp),
-              child: Center(child: Text('SnapBack', style: GoogleFonts.mukta(fontSize: 19, fontWeight: FontWeight.bold, color: AppColors.white),),),
+              child: Center(child: Image.asset(AppAssets.logo, height: 14.h,),),
             ),
             Expanded(
               child: Container(

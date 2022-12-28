@@ -4,6 +4,7 @@ import 'package:ionicons/ionicons.dart';
 import 'package:nutrition/authentication/register.dart';
 import 'package:nutrition/shared/constants.dart';
 import 'package:nutrition/shared/widgets/menu.dart';
+import 'package:nutrition/themes/assets.dart';
 import 'package:nutrition/themes/colors.dart';
 import 'package:sizer/sizer.dart';
 
@@ -21,9 +22,9 @@ class Login extends StatelessWidget {
         child: Column(
           children: [
             Container(
-              height: 16.h,
+              height: 20.h,
               padding: EdgeInsets.only(top: 5.sp, bottom: 5.sp),
-              child: Center(child: Text('SnapBack', style: GoogleFonts.mukta(fontSize: 19, fontWeight: FontWeight.bold, color: AppColors.white),),),
+              child: Center(child: Image.asset(AppAssets.logo, height: 14.h,),),
             ),
             Expanded(
               child: Container(

@@ -3,8 +3,8 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:nutrition/meal_plan/widgets/meal_plan_card.dart';
 import 'package:sizer/sizer.dart';
 
-import '../themes/assets.dart';
-import '../themes/colors.dart';
+import '../../themes/assets.dart';
+import '../../themes/colors.dart';
 
 class MealPlan extends StatelessWidget {
   const MealPlan({Key? key}) : super(key: key);
@@ -12,7 +12,15 @@ class MealPlan extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(elevation: 0, backgroundColor: Colors.grey.shade50, title: Text('Meal Plan', style: GoogleFonts.mukta(color: AppColors.black),), automaticallyImplyLeading: false,),
+      appBar: AppBar(
+        elevation: 0,
+        backgroundColor: Colors.grey.shade50,
+        title: Text(
+          'Meal Plan',
+          style: GoogleFonts.mukta(color: AppColors.black),
+        ),
+        automaticallyImplyLeading: false,
+      ),
       body: Container(
         margin: EdgeInsets.symmetric(horizontal: 12.sp),
         child: ListView.builder(
@@ -55,7 +63,14 @@ class MealPlan extends StatelessWidget {
                         'One piece oil less cat fish pepper-soup with one cube seasoning of yourchoice.',
                   ),
                   SizedBox(height: 8.sp),
-                  const MealPlanCard(title: 'Snack', calories: 133, svg: AppAssets.snack, color: AppColors.pinky,meal: '2 Cucumber, 200 grams of watermelon, 2 oranges, 4 medium sized carrots OR, 2 boiled eggs',),
+                  const MealPlanCard(
+                    title: 'Snack',
+                    calories: 133,
+                    svg: AppAssets.snack,
+                    color: AppColors.pinky,
+                    meal:
+                        '2 Cucumber, 200 grams of watermelon, 2 oranges, 4 medium sized carrots OR, 2 boiled eggs',
+                  ),
                   SizedBox(height: 8.sp),
                   MealPlanCard(
                     title: 'Dinner',

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:nutrition/meal_plan/meal_plan.dart';
+import 'package:nutrition/meal_plan/screens/meal_plan.dart';
 import 'package:nutrition/survey/screens/gender.dart';
 import 'package:nutrition/survey/screens/height.dart';
 import 'package:nutrition/survey/screens/weekly_goal.dart';

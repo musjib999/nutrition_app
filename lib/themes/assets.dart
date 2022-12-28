@@ -5,8 +5,10 @@ class AppAssets {
   static const String lunch = 'assets/svgs/lunch.svg';
   static const String snack = 'assets/svgs/snack.svg';
   static const String dinner = 'assets/svgs/dinner.svg';
+  static const String watermelon = 'assets/svgs/watermelon.svg';
 
   static const String salad = 'assets/images/salad.png';
   static const String scale = 'assets/images/scale.png';
   static const String calories = 'assets/images/calories.png';
+  static const String logo = 'assets/images/logo.jpg';
 }
