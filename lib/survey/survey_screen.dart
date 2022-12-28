@@ -52,17 +52,20 @@ class _SurveyScreenState extends State<SurveyScreen> {
                   ],
                 ),
               ),
-              SizedBox(
-                height: 80.h,
-                child: PageView.builder(
-                    physics: const NeverScrollableScrollPhysics(),
-                  controller: surveyScreenController,
-                  itemCount: surveyScreens.length,
-                    itemBuilder: (context, index) {
-                  return surveyScreens[index];
-                }),
+              Expanded(
+                child: SizedBox(
+                  height: 80.h,
+                  child: PageView.builder(
+                      physics: const NeverScrollableScrollPhysics(),
+                    controller: surveyScreenController,
+                    itemCount: surveyScreens.length,
+                      itemBuilder: (context, index) {
+                    return surveyScreens[index];
+                  }),
+                ),
               ),
             ],
+
           ),
         ),
       ),
