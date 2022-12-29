@@ -7,9 +7,10 @@ import 'package:nutrition/themes/colors.dart';
 import 'package:sizer/sizer.dart';
 
 class SingleMealPlan extends StatelessWidget {
-  static Route route() =>
-      MaterialPageRoute(builder: (_) => const SingleMealPlan());
-  const SingleMealPlan({Key? key}) : super(key: key);
+  static Route route({required int day}) =>
+      MaterialPageRoute(builder: (_) => SingleMealPlan(day: day));
+  const SingleMealPlan({Key? key, required this.day}) : super(key: key);
+  final int day;
 
   @override
   Widget build(BuildContext context) {
@@ -43,7 +44,7 @@ class SingleMealPlan extends StatelessWidget {
                     SizedBox(
                       width: 50.w,
                       child: Text(
-                        'Your meal plan for Day 2',
+                        'Your meal plan for Day $day',
                         style: GoogleFonts.mukta(
                             fontSize: 27, fontWeight: FontWeight.w700),
                       ),

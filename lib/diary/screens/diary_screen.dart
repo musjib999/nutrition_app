@@ -80,7 +80,7 @@ class _DiaryState extends State<Diary> {
                     Expanded(
                       child: SingleChildScrollView(
                         child: GestureDetector(
-                          onTap: () => Navigator.of(context).push(SingleMealPlan.route()),
+                          onTap: () => Navigator.of(context).push(SingleMealPlan.route(day: 3)),
                           child: Container(
                             padding: EdgeInsets.all(8.sp),
                             decoration: BoxDecoration(
@@ -93,7 +93,7 @@ class _DiaryState extends State<Diary> {
                                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                   children: [
                                     Text('Today\'s Meal', style: GoogleFonts.mukta(fontSize: 20, fontWeight: FontWeight.w800),),
-                                    Text('Day 2', style: GoogleFonts.mukta(fontSize: 16, fontWeight: FontWeight.w500, color: AppColors.primaryColor),)
+                                    Text('Day 3', style: GoogleFonts.mukta(fontSize: 16, fontWeight: FontWeight.w500, color: AppColors.primaryColor),)
                                   ],
                                 ),
                                 SizedBox(height: 8.sp),
