@@ -7,6 +7,7 @@ class AppAssets {
   static const String dinner = 'assets/svgs/dinner.svg';
   static const String watermelon = 'assets/svgs/watermelon.svg';
 
+  static const String profilePic = 'assets/images/profile.jpeg';
   static const String salad = 'assets/images/salad.png';
   static const String scale = 'assets/images/scale.png';
   static const String calories = 'assets/images/calories.png';

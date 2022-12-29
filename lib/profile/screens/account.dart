@@ -3,6 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:ionicons/ionicons.dart';
 import 'package:nutrition/profile/screens/account_settings.dart';
 import 'package:nutrition/profile/screens/personal_information.dart';
+import 'package:nutrition/themes/assets.dart';
 import 'package:sizer/sizer.dart';
 
 import '../../themes/colors.dart';
@@ -26,11 +27,7 @@ class Account extends StatelessWidget {
               child: CircleAvatar(
                 radius: 40.0,
                 backgroundColor: AppColors.inputGrey,
-                child: Icon(
-                  Ionicons.person,
-                  color: AppColors.white,
-                  size: 40,
-                ),
+                backgroundImage: AssetImage(AppAssets.profilePic),
               ),
             ),
             SizedBox(height: 7.sp),

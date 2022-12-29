@@ -29,7 +29,7 @@ class _DiaryState extends State<Diary> {
               Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const CircleAvatar(radius: 25, backgroundImage: NetworkImage('https://avatars.githubusercontent.com/u/53815937?v=4'),),
+                  const CircleAvatar(radius: 25, backgroundImage: AssetImage(AppAssets.profilePic),),
                   SizedBox(width: 8.sp),
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
